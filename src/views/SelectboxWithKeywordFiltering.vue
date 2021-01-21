@@ -2,7 +2,7 @@
   <view-wrapper
     :information="information"
   >
-    <div class="centerd">
+    <div class="centered">
       <keyword-filter-selectbox
         v-model="selectedItem"
         :items="items"
@@ -25,15 +25,15 @@ export default {
     return {
       information: 'Made selectbox with keyword filtering with popover and table.',
 
-      items: ['Kebin', 'Sarah', 'David', 'Tom', 'Akao'],
-      selectedItem: 'Kebin'
+      items: ['Kevin', 'Sarah', 'David', 'Tom', 'Akao'],
+      selectedItem: 'Kevin'
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.centerd {
+.centered {
   display: flex;
   align-items: center;
   justify-content: center;

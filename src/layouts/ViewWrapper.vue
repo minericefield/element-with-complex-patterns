@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     showInformation () {
-      this.$alert(this.information, 'Note', {
+      this.$alert(this.information, 'Info', {
         confirmButtonText: 'OK',
         dangerouslyUseHTMLString: true
       })

@@ -2,7 +2,7 @@
   <view-wrapper
     :information="information"
   >
-    <div class="centerd">
+    <div class="centered">
       <el-button
         type="primary"
         @click="isDialogVisible = true"
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped>
-.centerd {
+.centered {
   display: flex;
   align-items: center;
   justify-content: center;
