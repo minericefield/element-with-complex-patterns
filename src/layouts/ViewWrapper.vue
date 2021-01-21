@@ -6,7 +6,7 @@
       width="64px"
     >
       <i
-        class="el-icon-notebook-1"
+        class="el-icon-info"
         @click="showInformation"
       />
     </el-aside>
