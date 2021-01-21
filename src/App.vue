@@ -1,23 +1,65 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    class="app"
+  >
+    <el-container
+      class="app_container"
+    >
+      <el-header>
+        <el-tabs
+          :value="currentRouteName"
+          @input="transit"
+        >
+          <el-tab-pane
+            v-for="routeName in allRouteNames"
+            :key="routeName"
+            :name="routeName"
+            :label="routeName"
+          />
+        </el-tabs>
+      </el-header>
+      <el-main>
+        <router-view />
+      </el-main>
+    </el-container>
   </div>
 </template>
 
 <script>
 export default {
   name: 'app',
-  components: {
+  computed: {
+    allRouteNames () {
+      return this.$router.options.routes.map(route => route.name)
+    },
+    currentRouteName () {
+      return this.$route.name
+    }
+  },
+  methods: {
+    transit (name) {
+      if (name === this.currentRouteName) return
+      this.$router.push({ name })
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+}
+.app {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  &_container {
+    height: 100%;
+  }
 }
 </style>
