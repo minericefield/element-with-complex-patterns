@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import DialogWithLifecycle from '@/views/DialogWithLifecycle.vue'
 import LoopColumnsInTable from '@/views/LoopColumnsInTable.vue'
+import SelectboxWithKeywordFiltering from '@/views/SelectboxWithKeywordFiltering.vue'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ const routes = [
     path: '/loop_columns_in_table',
     name: 'Loop columns in table',
     component: LoopColumnsInTable
+  },
+  {
+    path: '/selectbox_with_keyword_filtering',
+    name: 'Select box with keyword filtering',
+    component: SelectboxWithKeywordFiltering
   }
 ]
 
