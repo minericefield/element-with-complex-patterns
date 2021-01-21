@@ -3,12 +3,18 @@
     class="view-wraper"
   >
     <el-aside
-      width="64px"
+      width="132px"
     >
-      <i
-        class="el-icon-info"
+      <div
+        class="info"
         @click="showInformation"
-      />
+      >
+        <i class="el-icon-info" />
+        <br />
+        <b>
+          Click to see the info
+        </b>
+      </div>
     </el-aside>
     <el-main
       class="view-wraper_main"
@@ -40,10 +46,18 @@ export default {
 <style lang="scss" scoped>
 .view-wraper {
   height: 100%;
-  ::v-deep i {
-    font-size: 32px;
+  ::v-deep aside {
     color: teal;
+  }
+  .info {
     cursor: pointer;
+    ::v-deep i {
+      font-size: 32px;
+    }
+    b {
+      text-align: left;
+      font-size: 12px;
+    }
   }
   &_main {
     padding-top: 0;
