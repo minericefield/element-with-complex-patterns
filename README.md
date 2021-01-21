@@ -1,5 +1,7 @@
 # element-with-complex-patterns
 
+Some of my personal knowledge for element-ui.  
+
 ## Project setup
 ```
 yarn install
