@@ -101,6 +101,10 @@ export default {
     }
     &_input {
       margin-bottom: 4px;
+      ::v-deep .el-input__inner {
+        height: 32px;
+        line-height: 32px;
+      }
     }
     &_table {
       max-height: 320px;
