@@ -25,7 +25,7 @@ export default {
     return {
       information: 'Made selectbox with keyword filtering with popover and table.',
 
-      items: ['Kevin', 'Sarah', 'David', 'Tom', 'Akao'],
+      items: ['Kevin', 'Sarah', 'David', 'Tom', 'Akao', 'Matthrew Forrest Matthrew Forrest', 'Oliver', 'Jake', 'Harry', 'Tom', 'James', 'Smith', 'Thomas', 'Daxtor', 'Ken', 'Tailor', 'Jessy', 'Kate', 'Pat'],
       selectedItem: 'Kevin'
     }
   }
