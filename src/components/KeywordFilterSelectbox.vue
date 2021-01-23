@@ -23,11 +23,15 @@
         />
       </div>
       <el-input
-        v-model="keyword"
+        :value="keyword"
+        @input="changeKeyword"
         placeholder="Please input keyword"
         class="selectbox-with-keyword-filtering_field_input"
       />
-      <div class="selectbox-with-keyword-filtering_field_table">
+      <div
+        ref="table"
+        class="selectbox-with-keyword-filtering_field_table"
+      >
         <el-table
           :data="searchedItems"
           :show-header="false"
@@ -68,6 +72,12 @@ export default {
   computed: {
     searchedItems () {
       return this.items.filter(item => item.toLowerCase().match(this.keyword.toLowerCase()))
+    }
+  },
+  methods: {
+    changeKeyword (keyword) {
+      this.keyword = keyword
+      this.$refs.table.scrollTop = 0
     }
   }
 }
