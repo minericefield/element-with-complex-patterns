@@ -41,7 +41,7 @@ export default {
   },
   data () {
     return {
-      information: 'When looping columns with v-for, giving only identitcal property for each item cannot realize reactivity of columns. <br /> We also have to mix it with index, like <strong>:key="itemProperty + index"</strong>',
+      information: 'When looping columns with v-for, only giving identitcal property for each item cannot realize reactivity of columns. <br /> We also have to mix it with index, like <strong>:key="itemProperty + index"</strong>',
 
       isDialogVisible: false,
       items: [
